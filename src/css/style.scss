@@ -1,0 +1,39 @@
+@import "../css/normalize.css";
+
+// Import des polices
+@font-face {
+  font-family: "Title";
+  src: url('../assets/fonts/SuperFlyTwo.otf') format('truetype');
+ }
+ @font-face {
+  font-family: "Text";
+  src: url('../assets/fonts/gothamBook.woff2') format("woff2"),
+        url('../assets/fonts/gothamBook.woff') format("woff");
+ }
+ @font-face {
+  font-family: "TextBold";
+  src: url('../assets/fonts/gothamBold.woff2') format("woff2"),
+        url('../assets/fonts/gothamBold.woff') format("woff");
+ }
+
+// Couleur
+$black: #030303;
+$bluePSA: #50dec9;
+$darkGrey: #cfcecd;
+$grey: #f0f0f0;
+
+// CSS Generale
+html{
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+h1 {
+   font-family: Title;
+   font-size: 3rem;
+ }
+
+ p{
+   font-family: Text;
+   position: relative;
+ }
