@@ -19,12 +19,12 @@ const project = [
     title: 'FFF',
     number: '4',
     date: '2014',
-    color: '#50dec9',
+    color: '#AE72D6',
   }, {
     title: 'Youphil',
     number: '5',
     date: '2012',
-    color: '#fe9ca9',
+    color: '#A2D672',
   },
 ];
 
