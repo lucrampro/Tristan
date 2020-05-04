@@ -15,17 +15,23 @@
   src: url('../assets/fonts/gothamBold.woff2') format("woff2"),
         url('../assets/fonts/gothamBold.woff') format("woff");
  }
+ @font-face {
+  font-family: "Logo";
+  src: url('../assets/fonts/moonstruck-webfont.woff2') format("woff2"),
+        url('../assets/fonts/moonstruck-webfont.woff') format("woff");
+ }
 
 // Couleur
 $black: #030303;
 $bluePSA: #50dec9;
 $darkGrey: #cfcecd;
 $grey: #f0f0f0;
+$white: #fefefe;
 
 // CSS Generale
 html{
   min-height: 100vh;
-  min-width: 100vw;
+  width: 100vw;
 }
 
 h1 {
