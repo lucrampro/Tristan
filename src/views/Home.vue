@@ -3,6 +3,7 @@
     <div class="video">
       <video src="../assets/movie/video-me-desktop.mp4"></video>
     </div>
+    <div class="section"></div>
   </div>
 </template>
 
@@ -22,6 +23,7 @@ export default {
   @import '../css/style';
 
   .home{
+    overflow-x: hidden;
     .video{
       width: 100vw;
       height: 100vh;
@@ -30,6 +32,11 @@ export default {
         width: 100vw;
         height: 100%;
       }
+    }
+    .section {
+      height: 100vh;
+      width: 100vw;
+      background: $homeGrey;
     }
   }
 </style>
