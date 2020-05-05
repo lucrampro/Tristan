@@ -35,7 +35,7 @@ export default {
     }
     .section {
       height: 100vh;
-      width: 100vw;
+      width: 100%;
       background: $homeGrey;
     }
   }
