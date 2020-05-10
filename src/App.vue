@@ -16,7 +16,7 @@
   z-index: 9999;
   display: flex;
   height: 150px;
-  width: 100vw;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   mix-blend-mode: difference;
