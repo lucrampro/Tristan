@@ -9,7 +9,7 @@
 </template>
 <script>
 // IMPORT of modules
-import gsap from 'gsap';
+import { gsap, Bounce } from 'gsap';
 // IMPORT of components
 import project from '../content';
 
@@ -30,26 +30,21 @@ export default {
     return {
       project,
       i: 0,
-      nextTl: gsap.timeline({ paused: true }),
     };
   },
   methods: {
     next() {
       if (this.i === this.project.length - 1) {
-        this.animationProjectChange();
-        // this.i = 0
+        this.animationProjectChange(() => { this.i = 0; });
       } else {
-        this.animationProjectChange();
-        // this.i += 1
+        this.animationProjectChange(() => { this.i += 1; });
       }
     },
     previous() {
       if (this.i === 0) {
-        this.animationProjectChange();
-        // this.i = this.project.length - 1
+        this.animationProjectChange(() => { this.i = this.project.length - 1; });
       } else {
-        this.animationProjectChange();
-        // this.i -= 1
+        this.animationProjectChange(() => { this.i -= 1; });
       }
     },
     onScroll(e) {
@@ -83,15 +78,14 @@ export default {
       document.body.addEventListener('keydown', this.onKey);
     },
     animationProjectChange(e) {
-      this.nextTl.to('.second', 0.5, { top: '50%', left: '50%' }, 'start')
+      gsap.timeline().to('.second', 0.5, { top: '50%', left: '50%' }, 'start')
         .to('.logo', 0.5, { rotate: '90deg', opacity: 0 }, 'start')
         .to('.title--background, .date', 0.5, { opacity: 0 }, 'start')
-        .to('.number', 0.5, { scale: 0, onComplete: () => e })
-        .to('.number', 0.5, { scale: 1 })
+        .to('.number', 0.5, { scale: 0, onComplete: () => { e(); } })
+        .to('.number', 0.8, { scale: 1, ease: Bounce.easeOut })
         .to('.second', 0.5, { top: '51%', left: '51%' }, 'sndStep')
         .to('.title--background, .date', 0.5, { opacity: 1 }, 'sndStep')
-        .to('.logo', 0.5, { rotate: '0deg', opacity: 1 })
-        .play();
+        .to('.logo', 0.8, { rotate: '0deg', opacity: 1, ease: Bounce.easeOut }, 'sndStep');
     },
   },
   computed: {
