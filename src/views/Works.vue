@@ -7,8 +7,6 @@
     <p class="date">{{ this.project[this.i].date }}</p>
   </div>
 </template>
-
-
 <script>
 // IMPORT of modules
 import gsap from 'gsap';
@@ -16,11 +14,9 @@ import gsap from 'gsap';
 import project from '../content';
 
 export default {
-
   name: 'Works',
   mounted() {
     this.changeProject();
-
     // this.nextTl.to('.second', 0.5, { top: '50%', left: '50%' }, 'start')
     //   .to('.logo', 0.5, { rotate: '90deg', opacity: 0 }, 'start')
     //   .to('.title--background, .date', 0.5, { opacity: 0 }, 'start')
@@ -112,7 +108,6 @@ export default {
   },
 };
 </script>
-
 <style lang="scss">
   @import '../css/style';
   .works {
