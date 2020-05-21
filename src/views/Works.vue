@@ -143,7 +143,7 @@ export default {
       width: 17vw;
       position: absolute;
       top: 35%;
-      left: 55%;
+      left: 53%;
       background: #fefefe;
       z-index: 2;
       display: flex;
@@ -152,8 +152,8 @@ export default {
       transform-origin: top left;
       img {
         display: block;
-        max-width: 100%;
-        max-height: 100%;
+        max-width: 80%;
+        max-height: 80%;
       }
     }
     .date {

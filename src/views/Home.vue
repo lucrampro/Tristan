@@ -23,9 +23,21 @@
       </div>
     </div>
     <div class="section">
-      <div class="wrapper"></div>
       <div class="wrapper">
-        <img class="tristan" src="../assets/img/home/tristan-dad.png" alt="">
+        <p class="subtitle">Super Daddy</p>
+        <p>En CDI depuis 2016 en qualité de père accompli. <span class='pink'> Maryam ♥︎ </span></p>
+      </div>
+      <div class="wrapper">
+        <img class="tristan dad" src="../assets/img/home/tristan-dad.png" alt="">
+      </div>
+    </div>
+    <div class="section">
+      <div class="wrapper">
+        <p class="subtitle">Super Daddy</p>
+        <p>En CDI depuis 2016 en qualité de père accompli. <span class='pink'> Maryam ♥︎ </span></p>
+      </div>
+      <div class="wrapper">
+        <img class="tristan dad" src="../assets/img/home/tristan-dad.png" alt="">
       </div>
     </div>
   </div>
@@ -80,7 +92,14 @@ export default {
           max-height: 80%;
           bottom: 0;
           width: 50%;
-
+          &.dad {
+            right: 0;
+            width: 120%;
+          }
+        }
+        .pink {
+          color: $pinkCream;
+          display: block;
         }
         .wrapper--icons{
           display: flex;
